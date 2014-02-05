@@ -7,8 +7,8 @@ class Client:
 		self.__socket = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
 		
 	def connect(self,host='localhost',port=8000):
-		print 'Conectando a ', host, ' en el puerto ',port
-		self.__socket.connect( ('localhost', 8000 ) )
+		self.__socket.connect( (host, port ) )
+		print 'Connected to ', host, ', port ',port
 
 		data, server = self.__socket.recvfrom( Client.buffer_size )
 		num = raw_input(data.strip())
@@ -23,11 +23,11 @@ class Client:
 
 		data, server = self.__socket.recvfrom( Client.buffer_size )
 
-		print "El resultado es ", data
+		print "Result is ", data
 		
 	def close(self):
 		if self.__socket is not None:
-			print 'Cerrando socket activo'
+			print 'Closing active socket...'
 			time.sleep(1)
 			self.__socket.close()
 			self.__socket = None
