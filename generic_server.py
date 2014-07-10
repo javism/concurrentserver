@@ -1,6 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
+# Author: Javier Sánchez Monedero (jsanchezmonedero at gmail.com)
+#
+# This code is released under GNU GENERAL PUBLIC LICENSE V3
+# http://www.gnu.org/licenses/gpl-3.0.html
+#
 # Implementa un servidor concurrente genérico muy básico. 
 # En este ejemplo implementamos un servidor de multiplicación 
 # que pedirá dos número al cliente y devolverá el resultado. 
@@ -11,6 +15,8 @@
 # request two numbers to the client and will send to it the result of the multiplication. 
 # If a number less or equal to cero is received the server stops all the conection
 # and thread and exit
+# 
+
 
 import socket
 import threading
